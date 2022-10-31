@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import Form from './components/Form';
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from 'react-toastify';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<>
+			<ToastContainer position="top-center" autoClose={4000} />
+			<div className="flex items-center h-screen">
+				<div className="container mx-auto">
+					<div className="max-w-lg mx-auto px-4">
+						<Form />
+					</div>
+				</div>
+			</div>
+		</>
+	);
 }
 
 export default App;
